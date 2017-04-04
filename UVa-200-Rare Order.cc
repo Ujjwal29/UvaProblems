@@ -9,7 +9,6 @@ stack<int>Stack;
 class Graph{
 	int V;
 	list<int> *adj;
-
 	void topologicalSortUtil(int v, bool visited[], stack<int> &Stack);
 
 	public:
@@ -36,7 +35,6 @@ void Graph::topologicalSortUtil(int v, bool visited[], stack<int> &Stack)
 		if(visited[*i]==false)
 			topologicalSortUtil(*i, visited, Stack);
 	Stack.push(v);
-
 }
 
 void Graph::topologicalSort()
